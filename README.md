@@ -25,6 +25,7 @@
   * [Installation](#installation)
 * [Usage](#usage)
   * [Preview](#quick-demo)
+* [Improvements that could be added](#improvements-to-be-added)
 * [Contact](#contact)
 
 
@@ -64,6 +65,9 @@ Launch your Apache server and go to the address of your app.
 ### Preview 
 ![preview-create-captcha](https://i.imgur.com/8ldpIxX.png)
 
+<!-- IMPROVEMENTS -->
+## Improvements to be added
+* Change the create-captcha.php into a class so that it could be used by others.
 
 <!-- CONTACT -->
 ## Contact
