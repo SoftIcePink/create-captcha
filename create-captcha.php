@@ -13,10 +13,9 @@
 /**
  * This function generates an image PNG which is used as a captcha.
  */
-function createCatpcha(){    
+function createCaptcha(){    
     // Random string generation
-    $letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
-    $word = "";
+    $word = generateRandomCaptchaWord();
     
     // Search for font files in the directory
     $FONT_TYPE = 'application/font-sfnt';
@@ -59,7 +58,7 @@ function createCatpcha(){
     for ($i = 0; $i < 10;$i++) {
         
         // The variables names are self-explanatory 
-        $letter = $letters[rand(0, strlen($letters)-1)];
+        $letter = $word[$i];
         $fontSize = rand(10,20);
         $textColor = imagecolorallocate($image, rand(0,200), rand(0, 200), rand(0,200));
         $margin = 10;
@@ -82,9 +81,6 @@ function createCatpcha(){
             // Solution : https://bugs.php.net/bug.php?id=75656
             imagettftext($image, $fontSize,$angle, $positionX, $positionY, $textColor, realpath($fontFamilyUsed), $letter);
         }
-        
-    
-        $word .=$letter;
     }
 
     // Store the captcha string in a session variable
@@ -95,5 +91,10 @@ function createCatpcha(){
 
     // Delete the image to lower ressources
     imagedestroy($image);
+}
+
+function generateRandomCaptchaWord() {
+    $str = bin2hex(openssl_random_pseudo_bytes(10));
+    return strtoupper(substr(base_convert($str, 16, 35), 0, 10));
 }
 ?>
