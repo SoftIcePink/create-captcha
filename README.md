@@ -48,9 +48,11 @@ This project was built with :
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-* Understanding of the basics of PHP.</p>
+* Understanding of the basics of PHP.
+* Recent version of PHP.
 * GD library is installed on your PHP version.
 Check <a href="https://www.php.net/manual/en/book.image.php">the official php.net doc on the GD library</a> or this <a href="https://mtodorovic.developpez.com/php/gd/?page=page_1"> french walkthrough</a> which can be easier to understand.
+* <b>php.ini</b> : php_openssl.ddl must be enabled
 
 ### Installation
 Clone the repo, host it on your server.
