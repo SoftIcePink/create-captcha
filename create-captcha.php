@@ -93,8 +93,23 @@ function createCaptcha(){
     imagedestroy($image);
 }
 
+/**
+ * Contribution of L.D. | GitHub : Stacced, https://github.com/Stacced
+ */
 function generateRandomCaptchaWord() {
-    $str = bin2hex(openssl_random_pseudo_bytes(10));
-    return strtoupper(substr(base_convert($str, 16, 35), 0, 10));
+
+    // Check if the PHP version has the extension enabled, and give an alternative
+    if(function_exists('openssl_random_pseudo_bytes')){
+        $str = bin2hex(openssl_random_pseudo_bytes(10));
+        return strtoupper(substr(base_convert($str, 16, 35), 0, 10));
+    }
+    else{
+        $letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+        $str = "";
+        for($count = 1; $count <= 10; $count++){
+            $str .= $letters[rand(0, strlen($letters)-1)];
+        }
+        return $str;
+    }
 }
 ?>
