@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/SoftIcePink/noise-pollution">
+  <a href="https://github.com/SoftIcePink/create-captcha">
     <img src="https://i.imgur.com/Lq9V9CG.png" alt="Logo" width="200" height="200">
   </a>
 
@@ -62,7 +62,7 @@ git clone https://github.com/SoftIcePink/create-captcha.git
 Launch your Apache server and go to the address of your app.
 
 ### Preview 
-![preview-create-captcha](https://i.imgur.com/S7YNCUt.png)
+![preview-create-captcha](https://i.imgur.com/8ldpIxX.png)
 
 
 <!-- CONTACT -->
