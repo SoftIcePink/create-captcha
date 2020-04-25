@@ -47,8 +47,8 @@ This project was built with :
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-<p>You know the basic of PHP.</p>
-<p>GD library is installed on your PHP version.</p>
+* Understanding of the basics of PHP.</p>
+* GD library is installed on your PHP version.
 Check <a href="https://www.php.net/manual/en/book.image.php">the official php.net doc on the GD library</a> or this <a href="https://mtodorovic.developpez.com/php/gd/?page=page_1"> french walkthrough</a> which can be easier to understand.
 
 ### Installation
