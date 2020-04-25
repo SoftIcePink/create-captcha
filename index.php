@@ -29,11 +29,11 @@
         }
         else{
             $wrong = true;
-            createCatpcha();
+            createCaptcha();
         }
     }
     else{
-        createCatpcha();
+        createCaptcha();
     }
 ?>
 <html>
